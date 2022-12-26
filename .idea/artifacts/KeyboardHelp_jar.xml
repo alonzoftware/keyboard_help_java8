@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="KeyboardHelp:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/KeyboardHelp_jar</output-path>
+    <root id="archive" name="KeyboardHelp.jar">
+      <element id="module-output" name="KeyboardHelp" />
+    </root>
+  </artifact>
+</component>
