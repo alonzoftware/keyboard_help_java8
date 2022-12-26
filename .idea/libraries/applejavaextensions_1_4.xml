@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="applejavaextensions-1.4">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../Extensions/applejavaextensions-1.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
