@@ -3,7 +3,7 @@ import com.apple.eawt.Application;
 import javax.swing.*;
 import java.awt.*;
 
-public class MainFrame extends JFrame {
+/*public class MainFrame extends JFrame {
 
     //Containers
     JTabbedPane jTabbedPaneMain;
@@ -13,9 +13,10 @@ public class MainFrame extends JFrame {
 
     //MAIN WINDOW
     public MainFrame() {
-        basicFrameConfiguration();
+
         createContainers();
         configContainers();
+        basicFrameConfiguration();
     }
     private void basicFrameConfiguration(){
         this.setTitle("Keyboard Helper - Developed By Alonzoftware");
@@ -44,18 +45,39 @@ public class MainFrame extends JFrame {
         //PANELS
         //===========
         //Main Panels
-        jPanelLogicChars = new JPanel(new BorderLayout());
-        jPanelLogicChars.setLayout(new BorderLayout());
-        jPanelSpecialChars = new JPanel(new BorderLayout());
-        jPanelSpecialChars.setLayout(new BorderLayout());
+        jPanelLogicChars = new JPanel();
+        jPanelLogicChars.setLayout(null);
+//        jPanelSpecialChars = new JPanel(new BorderLayout());
+//        jPanelSpecialChars.setLayout(new BorderLayout());
         //----------------------------------------
     }
     private void configContainers (){
         //=========================================
         this.add(jTabbedPaneMain);
-        jTabbedPaneMain.add("Servidor Local", jPanelLogicChars);
-        jTabbedPaneMain.add("Servidor Nacional", jPanelSpecialChars);
+        jTabbedPaneMain.add("LOGIC CHARACTERS", jPanelLogicChars);
+//        jTabbedPaneMain.add("Servidor Nacional", jPanelSpecialChars);
         //=========================================
         //this.setVisible(true);
+    }
+}*/
+
+public class MainFrame {
+    JFrame f;
+    public MainFrame(){
+        f=new JFrame();
+        JTextArea ta=new JTextArea(25,150);
+        JPanel p1=new JPanel();
+        p1.add(ta);
+        JPanel p2=new JPanel();
+        JPanel p3=new JPanel();
+        JTabbedPane tp=new JTabbedPane();
+        tp.setBounds(25,0,300,300);
+        tp.add("main",p1);
+        tp.add("visit",p2);
+        tp.add("help",p3);
+        f.add(tp);
+        f.setSize(400,400);
+        f.setLayout(null);
+        f.setVisible(true);
     }
 }
