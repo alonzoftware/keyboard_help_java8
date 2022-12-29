@@ -65,17 +65,22 @@ public class MainFrame {
     JFrame f;
     public MainFrame(){
         f=new JFrame();
-        JTextArea ta=new JTextArea(25,150);
-        JPanel p1=new JPanel();
+        JTextArea ta=new JTextArea(10,150);
+        ta.setBounds(5,5,100,15);
+        JTextArea ta2=new JTextArea(10,150);
+        ta2.setBounds(5,5,100,15);
+        JPanel p1=new JPanel(null);
         p1.add(ta);
-        JPanel p2=new JPanel();
-        JPanel p3=new JPanel();
+        JPanel p2=new JPanel(new BorderLayout());
+        JPanel p3=new JPanel(new BorderLayout());
         JTabbedPane tp=new JTabbedPane();
-        tp.setBounds(25,0,300,300);
+        tp.setBounds(0,25,300,300);
         tp.add("main",p1);
         tp.add("visit",p2);
         tp.add("help",p3);
+        f.add(ta2);
         f.add(tp);
+
         f.setSize(400,400);
         f.setLayout(null);
         f.setVisible(true);

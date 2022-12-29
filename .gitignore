@@ -3,6 +3,8 @@ out/
 !**/src/main/**/out/
 !**/src/test/**/out/
 .idea/libraries/applejavaextensions_1_4.xml
+.idea/workspace.xml
+
 
 ### Eclipse ###
 .apt_generated
