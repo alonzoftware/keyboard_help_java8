@@ -3,7 +3,7 @@ import com.apple.eawt.Application;
 import javax.swing.*;
 import java.awt.*;
 
-/*public class MainFrame extends JFrame {
+public class MainFrame extends JFrame {
 
     //Containers
     JTabbedPane jTabbedPaneMain;
@@ -13,14 +13,15 @@ import java.awt.*;
 
     //MAIN WINDOW
     public MainFrame() {
-
+        basicFrameConfiguration();
         createContainers();
         configContainers();
-        basicFrameConfiguration();
+        this.setLayout(null);
+        this.setVisible(true);
     }
     private void basicFrameConfiguration(){
         this.setTitle("Keyboard Helper - Developed By Alonzoftware");
-        final int sizeMain_x = 1024,  sizeMain_y = 768;
+        final int sizeMain_x = 512,  sizeMain_y = 512;
         this.setSize(sizeMain_x, sizeMain_y);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         ImageIcon img = new ImageIcon(getClass().getClassLoader().getResource("img/logo01.png"));
@@ -30,10 +31,7 @@ import java.awt.*;
             Application application = Application.getApplication();
             application.setDockIconImage(img.getImage());
         }
-
         this.setIconImage(img.getImage());
-        //this.setLayout(null);
-
     }
     private void createContainers (){
         //TABS
@@ -41,27 +39,26 @@ import java.awt.*;
         //Tab Main
         //=============================================
         jTabbedPaneMain = new JTabbedPane();
-        jTabbedPaneMain.setBounds(100, 100, 512, 512);
+        jTabbedPaneMain.setBounds(5, 65, 485, 400);
         //PANELS
         //===========
         //Main Panels
         jPanelLogicChars = new JPanel();
         jPanelLogicChars.setLayout(null);
-//        jPanelSpecialChars = new JPanel(new BorderLayout());
-//        jPanelSpecialChars.setLayout(new BorderLayout());
+        jPanelSpecialChars = new JPanel();
+        jPanelSpecialChars.setLayout(null);
         //----------------------------------------
     }
     private void configContainers (){
         //=========================================
         this.add(jTabbedPaneMain);
         jTabbedPaneMain.add("LOGIC CHARACTERS", jPanelLogicChars);
-//        jTabbedPaneMain.add("Servidor Nacional", jPanelSpecialChars);
+        jTabbedPaneMain.add("SPECIAL CHARACTERS", jPanelSpecialChars);
         //=========================================
-        //this.setVisible(true);
     }
-}*/
+}
 
-public class MainFrame {
+/*public class MainFrame {
     JFrame f;
     public MainFrame(){
         f=new JFrame();
@@ -85,4 +82,4 @@ public class MainFrame {
         f.setLayout(null);
         f.setVisible(true);
     }
-}
+}*/
