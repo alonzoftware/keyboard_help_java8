@@ -1,14 +1,23 @@
 package KeyboardHelp;
+import KeyboardHelp.Components.JButtonChar;
 import KeyboardHelp.Panels.JPanelLogicChars;
+import KeyboardHelp.Panels.JPanelMain;
+import KeyboardHelp.Panels.JPanelSpecialChars;
 import com.apple.eawt.Application;
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.datatransfer.StringSelection;
+import java.awt.Toolkit;
+import java.awt.datatransfer.Clipboard;
 
 public class MainFrame extends JFrame {
 
     //Containers
     JTabbedPane jTabbedPaneMain;
-    JPanel jPanelSpecialChars;
-    JPanelLogicChars jpanelLogicChars;
+    JPanelMain jPanelMain;
+    JPanelSpecialChars jPanelSpecialChars;
+    JPanelLogicChars jPanelLogicChars;
 
 
     //MAIN WINDOW
@@ -16,6 +25,7 @@ public class MainFrame extends JFrame {
         basicFrameConfiguration();
         createContainers();
         configContainers();
+        eventsComponents();
         this.setLayout(null);
         this.setVisible(true);
     }
@@ -43,22 +53,56 @@ public class MainFrame extends JFrame {
         //PANELS
         //===========
         //Main Panels
+        jPanelMain = new JPanelMain();
+        jPanelMain.setBounds(0, 0, 512, 512);
 
-        jPanelSpecialChars = new JPanel();
-        jPanelSpecialChars.setLayout(null);
+        jPanelSpecialChars = new JPanelSpecialChars();
+        jPanelSpecialChars.setBounds(0, 0, 485, 400);
 
-        jpanelLogicChars = new JPanelLogicChars() ;
-        jpanelLogicChars.setBounds(0, 0, 485, 400);
+        jPanelLogicChars = new JPanelLogicChars() ;
+        jPanelLogicChars.setBounds(0, 0, 485, 400);
         //----------------------------------------
 
     }
     private void configContainers (){
         //=========================================
         this.add(jTabbedPaneMain);
-//        this.add(LogicCharsPanel1);
-        jTabbedPaneMain.add("LOGIC CHARACTERS", jpanelLogicChars);
+        this.add(jPanelMain);
+        jTabbedPaneMain.add("LOGIC CHARACTERS", jPanelLogicChars);
         jTabbedPaneMain.add("SPECIAL CHARACTERS", jPanelSpecialChars);
         //=========================================
+    }
+    private void eventsComponents(){
+
+
+        setButtonAction(jPanelLogicChars.jbuttonChar01);
+        setButtonAction(jPanelLogicChars.jbuttonChar02);
+        setButtonAction(jPanelLogicChars.jbuttonChar03);
+
+
+        setButtonAction(jPanelSpecialChars.jbuttonChar01);
+        setButtonAction(jPanelSpecialChars.jbuttonChar02);
+        setButtonAction(jPanelSpecialChars.jbuttonChar03);
+        setButtonAction(jPanelSpecialChars.jbuttonChar04);
+        setButtonAction(jPanelSpecialChars.jbuttonChar05);
+        setButtonAction(jPanelSpecialChars.jbuttonChar06);
+    }
+
+    private void setButtonAction(JButtonChar jButtonChar){
+        jButtonChar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String str = jButtonChar.getText();
+                copyChar(str);
+                jPanelMain.txtCharCopied.setText("Copied :  " + str);
+            }
+        });
+    }
+    private void copyChar(String str){
+        String myString = str;
+        StringSelection stringSelection = new StringSelection(myString);
+        Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+        clipboard.setContents(stringSelection, null);
     }
 }
 
