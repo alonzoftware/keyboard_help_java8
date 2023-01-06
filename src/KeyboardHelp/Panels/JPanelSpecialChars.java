@@ -10,7 +10,7 @@ public class JPanelSpecialChars extends JPanel {
     //=================================================
     public JButton btn01;
     public JButtonChar jbuttonChar01,jbuttonChar02,jbuttonChar03;
-    public JButtonChar jbuttonChar04,jbuttonChar05,jbuttonChar06;
+    public JButtonChar jbuttonChar04,jbuttonChar05,jbuttonChar06,jbuttonChar07;
     //=================================================
     public JPanelSpecialChars(){
         super(null);
@@ -35,6 +35,9 @@ public class JPanelSpecialChars extends JPanel {
         x= x +xDiff;
         jbuttonChar05 = new JButtonChar("~",x,y);
         this.add(jbuttonChar05);
+        x= x +xDiff;
+        jbuttonChar06 = new JButtonChar("€",x,y);
+        this.add(jbuttonChar06);
         x= x +xDiff;
         jbuttonChar06 = new JButtonChar("€",x,y);
         this.add(jbuttonChar06);
