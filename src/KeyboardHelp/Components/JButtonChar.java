@@ -6,7 +6,7 @@ import java.awt.*;
 public class JButtonChar extends JButton {
     private String str;
     private int x,y;
-    private int width = 50;
+    private int width = 70;
     private int height = 50;
     public JButtonChar(String str, int x, int y) {
         //Button Download

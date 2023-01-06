@@ -68,17 +68,12 @@ public class MainFrame extends JFrame {
         //=========================================
         this.add(jTabbedPaneMain);
         this.add(jPanelMain);
-        jTabbedPaneMain.add("LOGIC CHARACTERS", jPanelLogicChars);
+
         jTabbedPaneMain.add("SPECIAL CHARACTERS", jPanelSpecialChars);
+        jTabbedPaneMain.add("LOGIC CHARACTERS", jPanelLogicChars);
         //=========================================
     }
     private void eventsComponents(){
-
-
-        setButtonAction(jPanelLogicChars.jbuttonChar01);
-        setButtonAction(jPanelLogicChars.jbuttonChar02);
-        setButtonAction(jPanelLogicChars.jbuttonChar03);
-
 
         setButtonAction(jPanelSpecialChars.jbuttonChar01);
         setButtonAction(jPanelSpecialChars.jbuttonChar02);
@@ -86,6 +81,29 @@ public class MainFrame extends JFrame {
         setButtonAction(jPanelSpecialChars.jbuttonChar04);
         setButtonAction(jPanelSpecialChars.jbuttonChar05);
         setButtonAction(jPanelSpecialChars.jbuttonChar06);
+
+        setButtonAction(jPanelSpecialChars.jbuttonChar12);
+        setButtonAction(jPanelSpecialChars.jbuttonChar13);
+        setButtonAction(jPanelSpecialChars.jbuttonChar11);
+        setButtonAction(jPanelSpecialChars.jbuttonChar14);
+        setButtonAction(jPanelSpecialChars.jbuttonChar15);
+        setButtonAction(jPanelSpecialChars.jbuttonChar16);
+
+
+        setButtonAction(jPanelLogicChars.jbuttonChar01);
+        setButtonAction(jPanelLogicChars.jbuttonChar02);
+        setButtonAction(jPanelLogicChars.jbuttonChar03);
+        setButtonAction(jPanelLogicChars.jbuttonChar04);
+        setButtonAction(jPanelLogicChars.jbuttonChar05);
+        setButtonAction(jPanelLogicChars.jbuttonChar06);
+
+        setButtonAction(jPanelLogicChars.jbuttonChar11);
+        setButtonAction(jPanelLogicChars.jbuttonChar12);
+        setButtonAction(jPanelLogicChars.jbuttonChar13);
+        setButtonAction(jPanelLogicChars.jbuttonChar14);
+        setButtonAction(jPanelLogicChars.jbuttonChar15);
+        setButtonAction(jPanelLogicChars.jbuttonChar16);
+
     }
 
     private void setButtonAction(JButtonChar jButtonChar){

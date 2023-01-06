@@ -21,14 +21,14 @@ public class JPanelMain extends JPanel {
         lblCharCopied = new JLabel("CHARACTER COPIED");
         lblCharCopied.setFont(new Font("Calibri", Font.BOLD, 18));
         lblCharCopied.setForeground(Color.YELLOW);
-        lblCharCopied.setBounds(15, 5, 180, 30);
+        lblCharCopied.setBounds(15, 15, 180, 30);
         lblCharCopied.setHorizontalAlignment(JLabel.LEFT);
         lblCharCopied.setVerticalAlignment(JLabel.CENTER);
         this.add(lblCharCopied);
     }
     private void setTxtCharCopied() {
         txtCharCopied = new JTextField("");
-        txtCharCopied.setBounds(205, 5, 150, 30);
+        txtCharCopied.setBounds(205, 15, 150, 30);
         txtCharCopied.setHorizontalAlignment(JTextField.CENTER);
         txtCharCopied.setFont(new Font("Calibri", Font.BOLD, 18));
         this.add(txtCharCopied);

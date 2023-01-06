@@ -10,7 +10,12 @@ public class JPanelSpecialChars extends JPanel {
     //=================================================
     public JButton btn01;
     public JButtonChar jbuttonChar01,jbuttonChar02,jbuttonChar03;
-    public JButtonChar jbuttonChar04,jbuttonChar05,jbuttonChar06,jbuttonChar07;
+    public JButtonChar jbuttonChar04,jbuttonChar05,jbuttonChar06;
+    //=================================================
+    //2nd ROW
+    //=================================================
+    public JButtonChar jbuttonChar11,jbuttonChar12,jbuttonChar13;
+    public JButtonChar jbuttonChar14,jbuttonChar15,jbuttonChar16;
     //=================================================
     public JPanelSpecialChars(){
         super(null);
@@ -18,9 +23,11 @@ public class JPanelSpecialChars extends JPanel {
         startComponents();
     }
     private void startComponents() {
-        int x = 15;
-        int xDiff = 65;
-        int y = 10;
+        renderRow0(15,75,10);
+        renderRow1(15,75,70);
+
+    }
+    private void renderRow0(int x, int xDiff, int y){
         jbuttonChar01 = new JButtonChar("ª",x,y);
         this.add(jbuttonChar01);
         x= x +xDiff;
@@ -33,13 +40,31 @@ public class JPanelSpecialChars extends JPanel {
         jbuttonChar04 = new JButtonChar("#",x,y);
         this.add(jbuttonChar04);
         x= x +xDiff;
-        jbuttonChar05 = new JButtonChar("~",x,y);
+        jbuttonChar05 = new JButtonChar("$",x,y);
         this.add(jbuttonChar05);
         x= x +xDiff;
         jbuttonChar06 = new JButtonChar("€",x,y);
         this.add(jbuttonChar06);
         x= x +xDiff;
-        jbuttonChar06 = new JButtonChar("€",x,y);
-        this.add(jbuttonChar06);
+    }
+    private void renderRow1(int x, int xDiff, int y){
+        jbuttonChar11 = new JButtonChar("¡",x,y);
+        this.add(jbuttonChar11);
+        x= x +xDiff;
+        jbuttonChar12 = new JButtonChar("!",x ,y);
+        this.add(jbuttonChar12);
+        x= x +xDiff;
+        jbuttonChar13 = new JButtonChar("¿",x,y);
+        this.add(jbuttonChar13);
+        x= x +xDiff;
+        jbuttonChar14 = new JButtonChar("?",x,y);
+        this.add(jbuttonChar14);
+        x= x +xDiff;
+        jbuttonChar15 = new JButtonChar("~",x,y);
+        this.add(jbuttonChar15);
+        x= x +xDiff;
+        jbuttonChar16 = new JButtonChar("^",x,y);
+        this.add(jbuttonChar16);
+        x= x +xDiff;
     }
 }
