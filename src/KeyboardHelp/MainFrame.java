@@ -1,14 +1,14 @@
 package KeyboardHelp;
+import KeyboardHelp.Panels.JPanelLogicChars;
 import com.apple.eawt.Application;
 import javax.swing.*;
-import java.awt.*;
 
 public class MainFrame extends JFrame {
 
     //Containers
     JTabbedPane jTabbedPaneMain;
-    JPanel jPanelLogicChars;
     JPanel jPanelSpecialChars;
+    JPanelLogicChars jpanelLogicChars;
 
 
     //MAIN WINDOW
@@ -43,16 +43,20 @@ public class MainFrame extends JFrame {
         //PANELS
         //===========
         //Main Panels
-        jPanelLogicChars = new JPanel();
-        jPanelLogicChars.setLayout(null);
+
         jPanelSpecialChars = new JPanel();
         jPanelSpecialChars.setLayout(null);
+
+        jpanelLogicChars = new JPanelLogicChars() ;
+        jpanelLogicChars.setBounds(0, 0, 485, 400);
         //----------------------------------------
+
     }
     private void configContainers (){
         //=========================================
         this.add(jTabbedPaneMain);
-        jTabbedPaneMain.add("LOGIC CHARACTERS", jPanelLogicChars);
+//        this.add(LogicCharsPanel1);
+        jTabbedPaneMain.add("LOGIC CHARACTERS", jpanelLogicChars);
         jTabbedPaneMain.add("SPECIAL CHARACTERS", jPanelSpecialChars);
         //=========================================
     }
