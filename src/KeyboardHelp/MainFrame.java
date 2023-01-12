@@ -1,5 +1,6 @@
 package KeyboardHelp;
 import KeyboardHelp.Components.JButtonChar;
+import KeyboardHelp.Helpers.OSInfo;
 import KeyboardHelp.Panels.JPanelLogicChars;
 import KeyboardHelp.Panels.JPanelMain;
 import KeyboardHelp.Panels.JPanelSpecialChars;
@@ -35,8 +36,7 @@ public class MainFrame extends JFrame {
         this.setSize(sizeMain_x, sizeMain_y);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         ImageIcon img = new ImageIcon(getClass().getClassLoader().getResource("img/logo01.png"));
-        String os = System.getProperty("os.name");
-        if (os.contains("Mac")) {
+        if (OSInfo.getPlatform() == "Mac"){
             //System.setProperty("apple.eawt.Application.setDockIconImage", img.getImage());
             Application application = Application.getApplication();
             application.setDockIconImage(img.getImage());
@@ -88,6 +88,13 @@ public class MainFrame extends JFrame {
         setButtonAction(jPanelSpecialChars.jbuttonChar14);
         setButtonAction(jPanelSpecialChars.jbuttonChar15);
         setButtonAction(jPanelSpecialChars.jbuttonChar16);
+
+        setButtonAction(jPanelSpecialChars.jbuttonChar22);
+        setButtonAction(jPanelSpecialChars.jbuttonChar23);
+        setButtonAction(jPanelSpecialChars.jbuttonChar21);
+        setButtonAction(jPanelSpecialChars.jbuttonChar24);
+        setButtonAction(jPanelSpecialChars.jbuttonChar25);
+        setButtonAction(jPanelSpecialChars.jbuttonChar26);
 
 
         setButtonAction(jPanelLogicChars.jbuttonChar01);

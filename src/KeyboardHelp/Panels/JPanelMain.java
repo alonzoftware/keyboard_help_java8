@@ -1,6 +1,7 @@
 package KeyboardHelp.Panels;
 
 import KeyboardHelp.Components.JButtonChar;
+import KeyboardHelp.Helpers.OSInfo;
 
 import javax.swing.*;
 import java.awt.*;
@@ -19,7 +20,12 @@ public class JPanelMain extends JPanel {
     }
     private void setLblCharCopied() {
         lblCharCopied = new JLabel("CHARACTER COPIED");
-        lblCharCopied.setFont(new Font("Calibri", Font.BOLD, 18));
+        if (OSInfo.getPlatform()=="Mac"){
+            lblCharCopied.setFont(new Font("Calibri", Font.BOLD, 15));
+        }else{
+
+            lblCharCopied.setFont(new Font("Calibri", Font.BOLD, 18));
+        }
         lblCharCopied.setForeground(Color.YELLOW);
         lblCharCopied.setBounds(15, 15, 180, 30);
         lblCharCopied.setHorizontalAlignment(JLabel.LEFT);
