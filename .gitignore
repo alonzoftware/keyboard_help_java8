@@ -4,6 +4,7 @@ out/
 !**/src/test/**/out/
 .idea/libraries/applejavaextensions_1_4.xml
 .idea/workspace.xml
+.idea/encodings.xml
 
 
 ### Eclipse ###

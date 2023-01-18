@@ -21,6 +21,11 @@ public class JPanelLogicChars extends JPanel {
     public JButtonChar jbuttonChar21,jbuttonChar22,jbuttonChar23;
     public JButtonChar jbuttonChar24,jbuttonChar25,jbuttonChar26;
     //=================================================
+    //4th ROW
+    //=================================================
+    public JButtonChar jbuttonChar31,jbuttonChar32,jbuttonChar33;
+    public JButtonChar jbuttonChar34,jbuttonChar35,jbuttonChar36;
+    //=================================================
     public JPanelLogicChars(){
         super(null);
         this.setBackground(Color.GRAY);
@@ -30,6 +35,7 @@ public class JPanelLogicChars extends JPanel {
         renderRow0(15,75,10);
         renderRow1(15,75,70);
         renderRow2(15,75,130);
+        renderRow3(15,75,190);
     }
     private void renderRow0(int x, int xDiff, int y){
         jbuttonChar01 = new JButtonChar("<",x,y);
@@ -89,6 +95,26 @@ public class JPanelLogicChars extends JPanel {
         x= x +xDiff;
         jbuttonChar26 = new JButtonChar("??",x,y);
         this.add(jbuttonChar26);
+
+    }
+    private void renderRow3(int x, int xDiff, int y){
+        jbuttonChar31 = new JButtonChar("(",x,y);
+        this.add(jbuttonChar31);
+        x= x +xDiff;
+        jbuttonChar32 = new JButtonChar(")",x ,y);
+        this.add(jbuttonChar32);
+        x= x +xDiff;
+        jbuttonChar33 = new JButtonChar("{",x,y);
+        this.add(jbuttonChar33);
+        x= x +xDiff;
+        jbuttonChar34 = new JButtonChar("}",x,y);
+        this.add(jbuttonChar34);
+        x= x +xDiff;
+        jbuttonChar35 = new JButtonChar("[",x,y);
+        this.add(jbuttonChar35);
+        x= x +xDiff;
+        jbuttonChar36 = new JButtonChar("]",x,y);
+        this.add(jbuttonChar36);
 
     }
 }

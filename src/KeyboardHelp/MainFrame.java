@@ -118,6 +118,13 @@ public class MainFrame extends JFrame {
         setButtonAction(jPanelLogicChars.jbuttonChar25);
         setButtonAction(jPanelLogicChars.jbuttonChar26);
 
+        setButtonAction(jPanelLogicChars.jbuttonChar32);
+        setButtonAction(jPanelLogicChars.jbuttonChar31);
+        setButtonAction(jPanelLogicChars.jbuttonChar33);
+        setButtonAction(jPanelLogicChars.jbuttonChar34);
+        setButtonAction(jPanelLogicChars.jbuttonChar35);
+        setButtonAction(jPanelLogicChars.jbuttonChar36);
+
     }
 
     private void setButtonAction(JButtonChar jButtonChar){
