@@ -11,6 +11,7 @@ import java.awt.event.ActionListener;
 import java.awt.datatransfer.StringSelection;
 import java.awt.Toolkit;
 import java.awt.datatransfer.Clipboard;
+import java.util.Objects;
 
 public class MainFrame extends JFrame {
 
@@ -35,8 +36,8 @@ public class MainFrame extends JFrame {
         final int sizeMain_x = 512,  sizeMain_y = 512;
         this.setSize(sizeMain_x, sizeMain_y);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        ImageIcon img = new ImageIcon(getClass().getClassLoader().getResource("img/logo01.png"));
-        if (OSInfo.getPlatform() == "Mac"){
+        ImageIcon img = new ImageIcon(Objects.requireNonNull(getClass().getClassLoader().getResource("img/logo01.png")));
+        if (OSInfo.getPlatform().equals("Mac")){
             //System.setProperty("apple.eawt.Application.setDockIconImage", img.getImage());
             Application application = Application.getApplication();
             application.setDockIconImage(img.getImage());
