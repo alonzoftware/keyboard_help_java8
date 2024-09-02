@@ -20,10 +20,9 @@ public class JPanelMain extends JPanel {
     }
     private void setLblCharCopied() {
         lblCharCopied = new JLabel("CHARACTER COPIED");
-        if (OSInfo.getPlatform()=="Mac"){
+        if (OSInfo.getPlatform().equals("Mac")){
             lblCharCopied.setFont(new Font("Calibri", Font.BOLD, 15));
         }else{
-
             lblCharCopied.setFont(new Font("Calibri", Font.BOLD, 18));
         }
         lblCharCopied.setForeground(Color.YELLOW);

@@ -74,10 +74,10 @@ public class JPanelSpecialChars extends JPanel {
         x= x +xDiff;
     }
     private void renderRow2(int x, int xDiff, int y){
-        jbuttonChar21 = new JButtonChar("⌘",x,y);
+        jbuttonChar21 = new JButtonChar("'",x,y);
         this.add(jbuttonChar21);
         x= x +xDiff;
-        jbuttonChar22 = new JButtonChar("⌥",x ,y);
+        jbuttonChar22 = new JButtonChar("´",x ,y);
         this.add(jbuttonChar22);
         x= x +xDiff;
         jbuttonChar23 = new JButtonChar("↩",x,y);

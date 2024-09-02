@@ -1,6 +1,7 @@
 package KeyboardHelp;
 import KeyboardHelp.Components.JButtonChar;
 import KeyboardHelp.Helpers.OSInfo;
+import KeyboardHelp.Panels.JPanelAppleChars;
 import KeyboardHelp.Panels.JPanelLogicChars;
 import KeyboardHelp.Panels.JPanelMain;
 import KeyboardHelp.Panels.JPanelSpecialChars;
@@ -14,14 +15,12 @@ import java.awt.datatransfer.Clipboard;
 import java.util.Objects;
 
 public class MainFrame extends JFrame {
-
     //Containers
     JTabbedPane jTabbedPaneMain;
     JPanelMain jPanelMain;
     JPanelSpecialChars jPanelSpecialChars;
     JPanelLogicChars jPanelLogicChars;
-
-
+    JPanelAppleChars jPanelAppleChars;
     //MAIN WINDOW
     public MainFrame() {
         basicFrameConfiguration();
@@ -62,8 +61,10 @@ public class MainFrame extends JFrame {
 
         jPanelLogicChars = new JPanelLogicChars() ;
         jPanelLogicChars.setBounds(0, 0, 485, 400);
-        //----------------------------------------
 
+        jPanelAppleChars = new JPanelAppleChars() ;
+        jPanelAppleChars.setBounds(0, 0, 485, 400);
+        //----------------------------------------
     }
     private void configContainers (){
         //=========================================
@@ -72,6 +73,7 @@ public class MainFrame extends JFrame {
 
         jTabbedPaneMain.add("SPECIAL CHARACTERS", jPanelSpecialChars);
         jTabbedPaneMain.add("LOGIC CHARACTERS", jPanelLogicChars);
+        jTabbedPaneMain.add("APPLE CHARACTERS", jPanelAppleChars);
         //=========================================
     }
     private void eventsComponents(){
@@ -126,6 +128,9 @@ public class MainFrame extends JFrame {
         setButtonAction(jPanelLogicChars.jbuttonChar35);
         setButtonAction(jPanelLogicChars.jbuttonChar36);
 
+        setButtonAction(jPanelAppleChars.jBtnChar01);
+        setButtonAction(jPanelAppleChars.jBtnChar02);
+
     }
 
     private void setButtonAction(JButtonChar jButtonChar){
@@ -138,9 +143,8 @@ public class MainFrame extends JFrame {
             }
         });
     }
-    private void copyChar(String str){
-        String myString = str;
-        StringSelection stringSelection = new StringSelection(myString);
+    private void copyChar(String copyStr){
+        StringSelection stringSelection = new StringSelection(copyStr);
         Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
         clipboard.setContents(stringSelection, null);
     }
