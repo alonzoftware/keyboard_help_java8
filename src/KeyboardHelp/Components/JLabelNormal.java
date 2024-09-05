@@ -1,5 +1,7 @@
 package KeyboardHelp.Components;
 
+import KeyboardHelp.Helpers.OSInfo;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -11,7 +13,12 @@ public class JLabelNormal extends JLabel {
         super(title);
         this.setBounds(x,y, width,height);
         this.setForeground(Color.YELLOW);
-        this.setFont(new Font("Calibri", Font.BOLD, 18));
+
+        if (OSInfo.getPlatform().equals("Mac")){
+            this.setFont(new Font("Calibri", Font.BOLD, 15));
+        }else{
+            this.setFont(new Font("Calibri", Font.BOLD, 18));
+        }
         this.setHorizontalAlignment(JLabel.LEFT);
         this.setVerticalAlignment(JLabel.CENTER);
     }
